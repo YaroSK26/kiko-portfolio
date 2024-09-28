@@ -12,7 +12,7 @@ const Gallery = () => {
     "./7.jpg",
     "./8.jpg",
   ];
-//
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -30,7 +30,9 @@ const Gallery = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 * (index + 1) }}
         >
-          <img src={image} alt={`Gallery ${index}`} className="w-48 h-48 object-cover" />
+          <a href={image} target="_blank" rel="noopener noreferrer">
+            <img src={image} alt={`Gallery ${index}`} className="w-48 h-48 object-cover" />
+          </a>
         </motion.div>
       ))}
     </motion.div>
